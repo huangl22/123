@@ -25,3 +25,5 @@ def do_action():
         os.popen(outstr2)
         outstr3 = "table_add forarp arp_response " + ueip + " => " + ueip + "\n"
         os.popen(outstr3)
+if __name__== "__main__":
+    app.run(debug=True)
