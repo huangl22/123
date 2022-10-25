@@ -39,5 +39,5 @@ def do_action():
     return "drop"
 
 if __name__ == "__main__":
-    process = subprocess.Popen(shlex.split("python test.py"), stdout=subprocess.PIPE, stdin=subprocess.PIPE)
+    process = subprocess.Popen(shlex.split("python3 ~/0919-p4/behavioral-model/tools/runtime_CLI.py --thrift-port 9090"), stdout=subprocess.PIPE, stdin=subprocess.PIPE)
     app.run(debug=True)
