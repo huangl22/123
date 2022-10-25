@@ -15,8 +15,9 @@ def do_action():
     address = request.form['address']
     dictionary = {"ueip": ueip, "teid": teid, "address": address}
     print(dictionary)
-
-    if ueip == "60.60.0.2" and teid == "3":
+    
+    #60.60.0.2 => 192.168.0.2
+    if ueip == "192.168.0.2" and teid == "3":
         # outstr1 = "table_add tognb gtpu_encap " + ueip + " => " + teid + " 11.11.11.1 11.11.11.231\n"
         process.stdin.write(f"table_add tognb gtpu_encap {ueip} => {teid} 11.11.11.1 11.11.11.231\n".encode())
         process.stdin.flush()
